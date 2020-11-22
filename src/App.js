@@ -4,13 +4,13 @@ import { AiFillCaretLeft, AiFillCaretRight, AiOutlineFieldNumber } from 'react-i
 import { useState, useEffect } from 'react';
 
 function App() {
-  const [loading, setLoading] = useState(true)
   const [ url, setUrl ] = useState('https://api.themoviedb.org/3/person/popular');
-  const [total_pages, setTotal_pages] = useState()
   const [ data, setData ] = useState([]);
   const [ page, setPage ] = useState(1);
   const [ api_key, setApi_key ] = useState('df8b08ecb436696fee41a00f8d87a540');
+  const [ loading, setLoading ] = useState(true)
   const [ language, setLanguage ] = useState('en');
+  const [ total_pages, setTotal_pages ] = useState()
 
 
   const getData = () => {
@@ -69,7 +69,7 @@ function App() {
           </div>
           <AiFillCaretRight className='icon' onClick={next} />
           <div className='tot'>total: {total_pages}</div>
-        </div>  
+        </div>
         }
       </div>
       <div className='all'>
