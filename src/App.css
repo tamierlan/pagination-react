@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+* {
+ box-sizing: border-box;
+}
+:root {
+  --basicColor: white;
+  --backgroundColor: #f2f2f2;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ margin: 0;
+ background: var(--backgroundColor);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+ position: fixed;
+ top: 0px;
+ width: 100%;
+ background: white;
+ border-bottom: 1px solid grey;
+ height: 60px;
+ box-shadow: 0 8px 6px -6px black;
+}
+.to-left {
+ float: right;
+ margin-right: 30px;
+ display: flex;
+}
+.all {
+ margin-top: 90px;
+}
+.tot {
+ height: 30px;
+ padding-top: 5px;
+ margin-top: 15px;
+ padding-left: 5px;
+ padding-right: 5px;
+ border-radius: 3px;
+ border: 1px solid grey;
+
+ color: grey;
+ margin-left: 10px;
+}
+.icon {
+ height: 60px;
+ color: silver;
+}
+.icon:hover {
+ color: black;
+}
+.btn {
+ color: silver;
+ line-height: 60px;
+ width: 30px;
+ padding-left: 5px;
+ /* border: 1px solid black; */
+ /* margin-left: 8px; */
+ /* margin-right: 8px; */
+}
+.mid {
+ color: black;
+}
+.nums {
+ display: flex;
+ width: 80px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Float four columns side by side */
+.column {
+ float: left;
+ width: 25%;
+ padding: 0 10px;
+ margin-bottom: 18px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+ margin: 0 -5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Clear floats after the columns */
+.row:after {
+ content: "";
+ display: table;
+ /* clear: both; */
+}
+.loading {
+ width: 100%;
+}
+
+/* Style the counter cards */
+.card {
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+ padding: 10px;
+ text-align: center;
+ background-color: white;
+ /* border: 1px solid silver; */
+ border-radius: 3px;
+}
+.card img {
+ height: 50px;
+}
+.name {
+ height: 40px;
+}
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+ .column {
+   width: 100%;
+   display: block;
+   margin-bottom: 20px;
+ }
 }
